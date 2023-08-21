@@ -1,0 +1,49 @@
+.Sidebar{
+  padding: 12px 0 24px;
+  background: #2680D9;
+  width: 80px;
+}
+.Sidebar__Item{
+  height: 72px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: .4s;
+}
+
+.Sidebar__button{
+
+}
+.Open-sidebar-button{
+  border-radius: 4px;
+  background: #58AAFC;
+}
+.Sidebar__Item--button{
+  cursor: pointer;
+  &:hover{
+    background: #1A69B8;
+    svg{
+      cursor: pointer;
+      path{
+        fill: #FFFFFF;
+      }
+    }
+  }
+}
+.Sidebar__Item--settings{
+  &:hover{
+    background: #1A69B8;
+  }
+}
+.Sidebar__Button{
+  background: none;
+  border: none;
+}
+.Sidebar__Toogle-Button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #58AAFC;
+}
