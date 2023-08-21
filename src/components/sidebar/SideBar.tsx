@@ -1,12 +1,13 @@
 import './sideBar.scss'
 import Avatar from "../common/Avatar";
+import avatarImg from '../../assets/avatar1.png'
 const SideBar = () =>{
 
     return(
         <aside className={'Sidebar'}>
             <ul className={'Sidebar__List'}>
                 <li className={'Sidebar__Item'}>
-                    <Avatar />
+                    <Avatar src={avatarImg} isOnline={false} />
                 </li>
                 <li className={'Sidebar__Item Sidebar__Item--button'}>
                     <button className={'Messages-button Sidebar__Button'}>

@@ -1,0 +1,81 @@
+.User{
+  cursor: pointer;
+  position: relative;
+  border-top: 1px solid #CCD1D6;;
+  padding: 11px 4px 11px 14px;
+  display: flex;
+  align-items: center;
+  transition: .4s;
+  &:hover{
+    background: #4290DE;
+    .User__Name, .User__Message-preview, .Message-Time{
+      color: white;
+    }
+  }
+}
+.User--is-active{
+  background: #4290DE;
+}
+.Message-Info{
+  padding-left: 14px;
+  max-width: 200px;
+}
+.User__Name{
+  text-align: start;
+  color: #114475;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.4px;
+}
+.User__Message-preview{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(17, 68, 117, 0.70);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.4px;
+}
+.Message-Time{
+  position: absolute;
+  top: 24%;
+  right: 5%;
+  color: rgba(17, 68, 117, 0.70);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+.Unread-Messages{
+  position: absolute;
+  bottom: 20%;
+  right: 4%;
+  width: 33px;
+  height: 22px;
+  border-radius: 11px;
+  background: #267FDB;
+  box-shadow: 0 3px 7px 0 rgba(17, 68, 117, 0.35);
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.4px;
+  &--unactive{
+    visibility: hidden;
+  }
+}

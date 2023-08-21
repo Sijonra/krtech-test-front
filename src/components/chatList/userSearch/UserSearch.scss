@@ -1,0 +1,22 @@
+.Search{
+  padding: 20px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Search__Input{
+  width: 317px;
+  padding: 5px 0 5px 16px;
+  border-radius: 15px;
+  background: #E7ECF1;
+  border: none;
+  color: #6D84A0;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.4px;
+  outline: none;
+}
