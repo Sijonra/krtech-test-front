@@ -1,0 +1,65 @@
+
+.Message-Companion{
+  display: flex;
+  justify-content: start;
+  margin-bottom: 8px;
+}
+.Message-Container--Owner{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.Message{
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 16px 16px 16px 4px;
+  background: #FFF;
+  box-shadow: 0 2px 4px 0 rgba(28, 41, 61, 0.12), 0 0 1px 0 rgba(28, 41, 61, 0.20);
+  &--owner{
+    position: relative;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 16px 16px 4px 16px;
+    background: #267FDB;
+    box-shadow: 0 2px 4px 0 rgba(28, 41, 61, 0.12), 0 0 1px 0 rgba(28, 41, 61, 0.20);
+    &{
+      .Message__Content{
+        color: #FFFFFF;
+      }
+    }
+    .Message__Time{
+      color: #FFFFFF;
+    }
+  }
+
+}
+.Message__Content{
+  margin-right: 50px;
+  max-width: 400px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-align: start;
+  color: #114475;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.4px;
+}
+.Message__Time{
+  position: absolute;
+  right: 16px;
+  bottom: 6px;
+  color: #798CA5;
+  text-align: right;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}

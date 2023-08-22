@@ -1,0 +1,48 @@
+.Chat{
+  height: calc(100vh - 78px - 52px);
+  width: 774px;
+}
+.Chat-Info{
+  background: #FFF;
+  box-shadow: 1px 0 4px 0 rgba(97, 97, 97, 0.20), 1px 0 2px 0 rgba(97, 97, 97, 0.20);
+  padding: 10px 0 13px 0;
+}
+.Chat__User-Name{
+  margin-bottom: 7px;
+  text-align: center;
+  color: #114475;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.4px;
+}
+.Chat__User-status{
+  display: flex;
+  justify-content: center;
+}
+.Chat-Messages{
+  height: 100%;
+  overflow: auto;
+  padding: 8px 30px 0 30px;
+  background: #E7ECF1;
+}
+.Message-Input-Wrapper{
+  padding: 12px 16px;
+  background: #FFF;
+  box-shadow: 0 0 4px 0 rgba(97, 97, 97, 0.20), 0 0 2px 0 rgba(97, 97, 97, 0.20);
+}
+.Message-Input__Input{
+  width: 712px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  border: none;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #E7ECF1;
+  outline: none;
+}

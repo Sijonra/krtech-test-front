@@ -1,0 +1,15 @@
+.Is-Typing{
+  display: flex;
+  align-items: center;
+  color: #2580DB;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.4px;
+  svg{
+    margin-right: 6px;
+  }
+}
