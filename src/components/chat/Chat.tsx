@@ -18,10 +18,10 @@ const Chat = () =>{
                 <Message isOwnerMessage={true} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/><Message isOwnerMessage={false} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/>
                 <Message isOwnerMessage={false} message={'lrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfw'}/>
                 <Message isOwnerMessage={true} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/><Message isOwnerMessage={false} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/>
-                <Message isOwnerMessage={false} message={'lrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfw'}/>
+                <Message isOwnerMessage={false} message={'lrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjlrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfwwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfw'}/>
                 <Message isOwnerMessage={true} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/><Message isOwnerMessage={false} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/>
                 <Message isOwnerMessage={false} message={'lrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfw'}/>
-                <Message isOwnerMessage={true} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/><Message isOwnerMessage={false} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/>
+                <Message isOwnerMessage={true} message={'lrwehrlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwwhfhwdnfjdwjfdwjnfjwjfw'}/><Message isOwnerMessage={false} message={'орп'}/>
                 <Message isOwnerMessage={false} message={'lrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfw'}/>
                 <Message isOwnerMessage={true} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/><Message isOwnerMessage={false} message={'lrwehrwhfhwdnfjdwjfdwjnfjwjfw'}/>
                 <Message isOwnerMessage={false} message={'lrwehrwhfhwdnflrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwlrwehrwhfhwdnfjdwjfdwjnfjwjfwjdwjfdwjnfjwjfw'}/>

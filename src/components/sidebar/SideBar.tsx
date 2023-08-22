@@ -1,10 +1,13 @@
 import './sideBar.scss'
 import Avatar from "../common/Avatar";
 import avatarImg from '../../assets/avatar1.png'
+import {useState} from "react";
 const SideBar = () =>{
 
+    let [sidebarIsOpen, setSidebarOpen] = useState(false)
+
     return(
-        <aside className={'Sidebar'}>
+        <aside className={!sidebarIsOpen ? 'Sidebar' : 'Sidebar--open'}>
             <ul className={'Sidebar__List'}>
                 <li className={'Sidebar__Item'}>
                     <Avatar src={avatarImg} isOnline={false} />
@@ -43,8 +46,8 @@ const SideBar = () =>{
                         </svg>
                     </button>
                 </li>
-                <li className={'Sidebar__Item Sidebar__Item--button'}>
-                    <button className={'Open-sidebar-button Sidebar__Toogle-Button Sidebar__Button'}>
+                <li onClick={()=>{setSidebarOpen(!sidebarIsOpen)}} className={'Sidebar__Item Sidebar__Item--button Toggle-Button'}>
+                    <button className={'Open-sidebar-button Sidebar__Toggle-Button Sidebar__Button'}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.21571 3.00001L3 5.11501L10.1971 12L3 18.885L5.21571 21L14.6443 12L5.21571 3.00001Z" fill="#2680D9"/>
                             <path d="M12.4314 3L10.2157 5.115L17.4129 12L10.2157 18.885L12.4314 21L21.86 12L12.4314 3Z" fill="#2680D9"/>

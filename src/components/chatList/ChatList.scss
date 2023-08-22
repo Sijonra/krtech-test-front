@@ -1,5 +1,8 @@
 .Chat-List{
-  height: 100vh;
+  height: calc(100vh - 70px);
   max-width: 345px;
+}
+.Users-List{
+  height: 100%;
   overflow: auto;
 }

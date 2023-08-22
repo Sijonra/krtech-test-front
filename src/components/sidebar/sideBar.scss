@@ -1,9 +1,15 @@
 .Sidebar{
   height: 100vh;
   background: #2680D9;
-  width: 80px;
+  max-width: 80px;
+}
+.Sidebar--open{
+  height: 100vh;
+  background: #2680D9;
+  //width: 246px;
 }
 .Sidebar__Item{
+  padding: 0 20px;
   height: 72px;
   display: flex;
   align-items: center;
@@ -12,9 +18,6 @@
   transition: .4s;
 }
 
-.Sidebar__button{
-
-}
 .Open-sidebar-button{
   border-radius: 4px;
   background: #58AAFC;
@@ -40,10 +43,14 @@
   background: none;
   border: none;
 }
-.Sidebar__Toogle-Button{
+.Sidebar__Toggle-Button{
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   background: #58AAFC;
+}
+.Toggle-Button{
+  position: absolute;
+  bottom: 0;
 }
