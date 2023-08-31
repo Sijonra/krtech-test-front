@@ -1,16 +1,26 @@
 import './sideBar.scss'
 import Avatar from "../common/Avatar";
 import avatarImg from '../../assets/avatar1.png'
-import {useState} from "react";
-const SideBar = () =>{
+import sidebarStore from "../../stores/sidebar-store";
+import {observer} from "mobx-react-lite";
 
-    let [sidebarIsOpen, setSidebarOpen] = useState(false)
+
+
+const SideBar = observer(() =>{
+
+    let {isOpen, setSideBarOpen} = sidebarStore;
+
 
     return(
-        <aside className={!sidebarIsOpen ? 'Sidebar' : 'Sidebar--open'}>
+        <aside className={!isOpen ? 'Sidebar' : 'Sidebar--open'}>
             <ul className={'Sidebar__List'}>
-                <li className={'Sidebar__Item'}>
-                    <Avatar src={avatarImg} isOnline={false} />
+                <li className={'Sidebar__Item Sidebar-Profile'}>
+                    <Avatar size={isOpen ? 70 : 50} src={avatarImg} isOnline={false} />
+                    <p className={'Sidebar__Profile-Name'}>Иван Иванов</p>
+                    <div className={'Sidebar__Profile-Online'}>
+                        <div className={'Sidebar__Profile-Icon'}></div>
+                        <p className={'Sidebar__Profile-status'}>Online</p>
+                    </div>
                 </li>
                 <li className={'Sidebar__Item Sidebar__Item--button'}>
                     <button className={'Messages-button Sidebar__Button'}>
@@ -25,6 +35,8 @@ const SideBar = () =>{
                                 </clipPath>
                             </defs>
                         </svg>
+                        <p className={'Messages-button__Label'}>Диалоги</p>
+                        <span className={'Messages-button__count'}>12</span>
                     </button>
                 </li>
                 <li className={'Sidebar__Item Sidebar__Item--button'}>
@@ -44,9 +56,10 @@ const SideBar = () =>{
                                 </clipPath>
                             </defs>
                         </svg>
+                        <p className={'Settings-button__Label'}>Настройки</p>
                     </button>
                 </li>
-                <li onClick={()=>{setSidebarOpen(!sidebarIsOpen)}} className={'Sidebar__Item Sidebar__Item--button Toggle-Button'}>
+                <li onClick={setSideBarOpen} className={'Sidebar__Item Sidebar__Item--button Toggle-Button'}>
                     <button className={'Open-sidebar-button Sidebar__Toggle-Button Sidebar__Button'}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.21571 3.00001L3 5.11501L10.1971 12L3 18.885L5.21571 21L14.6443 12L5.21571 3.00001Z" fill="#2680D9"/>
@@ -57,6 +70,6 @@ const SideBar = () =>{
             </ul>
         </aside>
     )
-}
+})
 
 export default SideBar

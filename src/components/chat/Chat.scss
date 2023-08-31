@@ -1,6 +1,12 @@
 .Chat{
+  transition: all .2s ease;
   height: calc(100vh - 78px - 52px);
-  max-width: 774px;
+  width: 774px;
+}
+.Chat-less{
+  transition: all 1s ease;
+  height: calc(100vh - 78px - 52px);
+  width: 608px;
 }
 .Chat-Info{
   background: #FFF;
@@ -35,7 +41,7 @@
   box-shadow: 0 0 4px 0 rgba(97, 97, 97, 0.20), 0 0 2px 0 rgba(97, 97, 97, 0.20);
 }
 .Message-Input__Input{
-  width: 712px;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;

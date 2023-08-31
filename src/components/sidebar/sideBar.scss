@@ -1,12 +1,14 @@
 .Sidebar{
+  transition: 0.2s all ease-in-out;
   height: 100vh;
   background: #2680D9;
-  max-width: 80px;
+  width: 80px;
 }
 .Sidebar--open{
+  transition: 0.2s all ease-in-out;
   height: 100vh;
   background: #2680D9;
-  //width: 246px;
+  width: 246px;
 }
 .Sidebar__Item{
   padding: 0 20px;
@@ -21,6 +23,13 @@
 .Open-sidebar-button{
   border-radius: 4px;
   background: #58AAFC;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  padding: 3px 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 .Sidebar__Item--button{
   cursor: pointer;
@@ -40,8 +49,12 @@
   }
 }
 .Sidebar__Button{
+  cursor: pointer;
   background: none;
   border: none;
+  svg{
+    transition: .4s;
+  }
 }
 .Sidebar__Toggle-Button{
   display: flex;
@@ -54,3 +67,122 @@
   position: absolute;
   bottom: 0;
 }
+.Messages-button__Label{
+  display: none;
+}
+.Settings-button__Label{
+  display: none;
+}
+.Messages-button__count{
+  display: none;
+}
+.Sidebar__Profile-Name{
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  display: none;
+}
+.Sidebar__Profile-Online{
+  display: none;
+  align-items: center;
+}
+.Sidebar__Profile-Icon{
+  width: 8px;
+  height: 8px;
+  background: #01BF93;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.Sidebar__Profile-status{
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.Sidebar--open{
+  .Sidebar__Profile-Online{
+    display: flex;
+  }
+  .Sidebar-Profile{
+    margin: 40px 0 40px;
+  }
+  .Sidebar__Profile-Name{
+    margin: 12px 0 12px;
+    display: block;
+  }
+  .Messages-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__count{
+      display: flex;
+      width: 23px;
+      height: 22px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 11px;
+      background: #F53648;
+      box-shadow: 0 3px 7px 0 rgba(17, 68, 117, 0.35);
+      color: #FFF;
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+    }
+    &__Label{
+      cursor: pointer;
+      display: block;
+      margin: 0 60px 0 20px;
+      color: #FFF;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+  .Settings-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__Label{
+      cursor: pointer;
+      display: block;
+      margin-left: 20px;
+      color: #FFF;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+  .Open-sidebar-button{
+    width: 207px;
+    height: 30px;
+    svg{
+      transition: .4s;
+      rotate: 180deg;
+    }
+  }
+}
+

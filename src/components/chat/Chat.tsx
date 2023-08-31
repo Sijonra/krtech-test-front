@@ -1,9 +1,14 @@
 import './Chat.scss'
 import IsTyping from "../common/IsTyping";
 import Message from "./messages/Message";
-const Chat = () =>{
+import {observer} from "mobx-react-lite";
+import sidebarStore from "../../stores/sidebar-store";
+const Chat = observer( () =>{
+
+    const isOpen = sidebarStore.isOpen
+
     return(
-        <section className={'Chat'}>
+        <section className={isOpen ? 'Chat-less' : 'Chat'}>
             <div className='Chat-Info'>
                 <p className={'Chat__User-Name'}>Анастасия Александровна</p>
                 <div className={'Chat__User-status'}>
@@ -36,6 +41,6 @@ const Chat = () =>{
             </div>
         </section>
     )
-}
+})
 
 export default Chat
