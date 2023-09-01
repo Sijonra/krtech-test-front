@@ -5,170 +5,215 @@ class ChatListStore{
         makeAutoObservable(this)
     }
     searchValue: string = ''
+
     setSearchValue = (value: string) =>{
         this.searchValue = value
     }
 
-    // getRandomIsTyping = ():boolean =>{
-    //
-    //     let res:boolean = Boolean(Math.round(Math.random()))
-    //     console.log(res)
-    //     return res;
-    // }
+    setIsTyping = (id: number) =>{
+        //this.users[id].isTyping = Boolean(Math.round(Math.random()))
+        this.users[id].isTyping = !this.users[id].isTyping
+    }
 
-    users  = [
+    incrementMessages = (id: number) =>{
+        this.users[id].messagesCount = this.users[id].messagesCount + 1;
+    }
+
+    setIsOnline = (id:number) =>{
+        this.users[id].isOnline = Boolean(Math.round(Math.random()))
+    }
+
+    setUserActive = (id:number) =>{
+        this.users.forEach(user=>{
+            user.isActive = false
+        })
+        this.users[id].isActive = true
+    }
+
+    clearUserMessages = (id:number) =>{
+        this.users[id].messagesCount = 0;
+    }
+
+    users:Array<{id:number, name: string, message: string, avatar: string, time: string, isTyping: boolean, messagesCount: number, isOnline: boolean, isActive: boolean}>  = [
         {
-            id: 1,
+            id: 0,
             name: 'Дмитрий Анатольевич',
             message: 'Документы будут готовы к вечеруДокументы будут готовы к вечеру',
-            avatar: '',
+            avatar: '../../../assets/avatar2.png',
             time: '10:43',
             isTyping: false,
-            messagesCount: Math.floor(Math.random() * 10),
-            setIsTyping: () =>{
-                this.users[0].isTyping = Boolean(Math.round(Math.random()))
-            },
-
+            messagesCount: 0,
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
         },
         {
-            id: 2,
+            id: 1,
             name: 'Анастасия Александровна',
             message: 'Документы буавыаывопоавпвадпбвадпбвадбду',
             avatar: '',
             time: '10:43',
             isTyping: false,
-            messagesCount: Math.round(Math.random()),
-            setIsTyping: () =>{
-                this.users[1].isTyping = Boolean(Math.round(Math.random()))
-            },
+            messagesCount: 0,
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
         },
         {
-            id: 3,
+            id: 2,
             name: 'Диалог М',
             message: 'Доступна новая веб-версияДоступна новая веб-версия',
             avatar: '',
             time: '10:43',
             isTyping: false,
-            messagesCount: Math.floor(Math.random() * 10),
-            setIsTyping: () =>{
-                this.users[2].isTyping = Boolean(Math.round(Math.random()))
-            },
+            messagesCount: 0,
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
         },
         {
-            id: 4,
+            id: 3,
             name: 'Андрей В.',
             message: 'Добрый день!',
             avatar: '',
             time: '10:43',
             isTyping: false,
-            messagesCount: Math.floor(Math.random() * 10),
-            setIsTyping: () =>{
-                this.users[3].isTyping = Boolean(Math.round(Math.random()))
-            },
+            messagesCount: 0,
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
         },
         {
-            id: 5,
+            id: 4,
             name: 'Андрей В.',
             message: 'ДДобрый день!',
             avatar: '',
             time: '10:43',
             isTyping: false,
             messagesCount: Math.floor(Math.random() * 10),
-            setIsTyping: () =>{
-                this.users[4].isTyping = Boolean(Math.round(Math.random()))
-            },
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
         },
-        // {
-        //     id: 6,
-        //     name: 'Анна',
-        //     message: 'Документы будут готовы к вечеруДокументы будут готовы к вечеру',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.round(Math.random()),
-        // },
-        // {
-        //     id: 7,
-        //     name: 'Игорь Хоменко',
-        //     message: 'Меня нет на работе. больничМеня нет на работе. больнич',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.round(Math.random()),
-        // },
-        // {
-        //     id: 8,
-        //     name: 'Алина Викторовна',
-        //     message: 'И слова, получив текст широко известноИ слова, получив текст широко известно',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 9,
-        //     name: 'Алина Викторовна',
-        //     message: 'И слова, получив текст широко известноИ слова, получив текст широко известно',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 10,
-        //     name: 'Вова',
-        //     message: 'Создающие собственные вариантыСоздающие собственные вариантыСоздающие собственные варианты ',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 11,
-        //     name: 'Алексей курочкин',
-        //     message: 'Создающие собственные вариантыСоздающие собственные варианты ',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 12,
-        //     name: 'Александр Шумский',
-        //     message: 'Создающие собственные вариантыСоздающие собственные варианты',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 13,
-        //     name: 'Давыденко Илья',
-        //     message: 'Документы будут готовы к вечеруДокументы будут готовы к вечеру',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 14,
-        //     name: 'Кострюков Антон',
-        //     message: 'Документы будут готовы к вечеруДокументы будут готовы к вечеру',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
-        // {
-        //     id: 15,
-        //     name: 'Слепцов Никита',
-        //     message: 'Документы будут готовы к вечеруДокументы будут готовы к вечеру',
-        //     avatar: '',
-        //     time: '10:43',
-        //     isTyping: false,
-        //     messagesCount: Math.floor(Math.random() * 10),
-        // },
+        {
+            id: 5,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 6,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 7,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 8,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 9,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 10,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 11,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 12,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 13,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+        {
+            id: 14,
+            name: 'Илья Давыденко',
+            message: 'ДДобрый дДДобрый деньДДобрый деньень!',
+            avatar: '',
+            time: '10:43',
+            isTyping: false,
+            messagesCount: Math.floor(Math.random() * 10),
+            isOnline: Boolean(Math.round(Math.random())),
+            isActive: false,
+        },
+
     ]
+    totalMessages: number = 0;
+    getTotalMessagesCount = () =>{
+        let res:number = 0;
+        this.users.forEach(user=>{
+            res += user.messagesCount
+        })
+        console.log(res)
+        this.totalMessages = res;
+    }
+
+
+
 
 }
 

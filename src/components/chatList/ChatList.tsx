@@ -23,7 +23,7 @@ const ChatList = observer(() => {
                 {
                     currentUsers.map((user)=>{
                         return(
-                            <User setIsTyping={user.setIsTyping} name={user.name} time={user.time} message={user.message} isTyping={user.isTyping} messagesCount={user.messagesCount} key={user.id} />
+                            <User isActive={user.isActive} avatar={user.avatar} isOnline={user.isOnline} id={user.id} name={user.name} time={user.time} message={user.message} isTyping={user.isTyping} messagesCount={user.messagesCount} key={user.id} />
                         )
                     })
                 }

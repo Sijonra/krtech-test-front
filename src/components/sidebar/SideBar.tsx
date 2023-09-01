@@ -3,13 +3,19 @@ import Avatar from "../common/Avatar";
 import avatarImg from '../../assets/avatar1.png'
 import sidebarStore from "../../stores/sidebar-store";
 import {observer} from "mobx-react-lite";
+import ChatListStore from "../../stores/chat-list-store";
+import {useEffect} from "react";
 
 
 
 const SideBar = observer(() =>{
 
     let {isOpen, setSideBarOpen} = sidebarStore;
+    let {totalMessages, getTotalMessagesCount} = ChatListStore;
 
+    useEffect(()=>{
+        getTotalMessagesCount()
+    }, [])
 
     return(
         <aside className={!isOpen ? 'Sidebar' : 'Sidebar--open'}>
@@ -36,7 +42,7 @@ const SideBar = observer(() =>{
                             </defs>
                         </svg>
                         <p className={'Messages-button__Label'}>Диалоги</p>
-                        <span className={'Messages-button__count'}>12</span>
+                        <span className={'Messages-button__count'}>{totalMessages}</span>
                     </button>
                 </li>
                 <li className={'Sidebar__Item Sidebar__Item--button'}>

@@ -15,6 +15,9 @@
 }
 .User--is-active{
   background: #4290DE;
+  .User__Name, .User__Message-preview, .Message-Time{
+    color: white;
+  }
 }
 .Message-Info{
   padding-left: 14px;
