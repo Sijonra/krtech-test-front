@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/krtech-test-front/static/css/main.ad7b8428.css",
+    "main.js": "/krtech-test-front/static/js/main.88c23410.js",
+    "static/js/787.94641229.chunk.js": "/krtech-test-front/static/js/787.94641229.chunk.js",
+    "index.html": "/krtech-test-front/index.html",
+    "main.ad7b8428.css.map": "/krtech-test-front/static/css/main.ad7b8428.css.map",
+    "main.88c23410.js.map": "/krtech-test-front/static/js/main.88c23410.js.map",
+    "787.94641229.chunk.js.map": "/krtech-test-front/static/js/787.94641229.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad7b8428.css",
+    "static/js/main.88c23410.js"
+  ]
+}
